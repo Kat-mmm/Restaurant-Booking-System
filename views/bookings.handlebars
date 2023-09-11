@@ -22,7 +22,19 @@
     </div>
 
 <table class="table is-fullwidth" >
-    <tr>
+    {{#each tables}}
+        <tr>
+            <td>{{this.table_name}}</td>
+            <td>{{this.capacity}}</td>
+            <td>{{this.number_of_people}}</td>
+            <td>{{this.username}}</td>
+            <td>0{{this.contact_number}}</td>
+            <td>
+                <button class="button is-warning" >Cancel booking</button>
+            </td>
+        </tr>
+    {{/each}}
+    {{!-- <tr>
         <th>Table name</th>
         <th>Table capacity</th>
         <th>Booking size</th>
@@ -50,15 +62,6 @@
             <button class="button is-warning" >Cancel booking</button>
         </td>
 
-    </tr>
-    <tr>
-        <td>Table 3</td>
-        <td>4</td>
-        <td>2</td>
-        <td>Indiana Jones</td>
-        <td>082 900 1276</td>
-        <td>
-            <button class="button is-warning" >Cancel booking</button>
-        </td>
-    </tr>
+    </tr> --}}
+    
 </table>
